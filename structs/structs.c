@@ -9,6 +9,11 @@
 */
 typedef struct Person {
 
+    char *name;
+    int age;
+    int height;
+    int weight;
+
 } Person;
 
 /*
@@ -21,6 +26,14 @@ typedef struct Person {
 */
 Person *createPerson(char *name, int age, int height, int weight)
 {
+    struct Person *person = malloc(sizeof(struct  Person));
+    
+    person->name = string_dup(name);
+    person->age = age;
+    person->height = height;
+    person->weight = weight;
+
+    return person;
 
 }
 
