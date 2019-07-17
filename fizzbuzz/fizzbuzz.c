@@ -10,8 +10,9 @@
 */
 int fizzbuzz(int n)
 {
+    int counter = 0;
     int i;
-    for(i=1; i<=100; i++)
+    for(i=0; i<=n; i++)
     {
         if((i%15)== 0)
             printf("number= %d FizzBuzz\n", i);
@@ -20,11 +21,12 @@ int fizzbuzz(int n)
         else if((i%5)==0)
             printf("number= %d Buzz\n", i);
         else
-            printf("number= %d\n",i);
-
+            counter++  ;
+            //printf("number= %d\n",i);
+        
     }
 
-    return 0;
+    return counter;
     
 
 }
